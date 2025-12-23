@@ -1,0 +1,106 @@
+.container-back{
+    display: flex;
+    align-items: center;
+    padding-bottom: 60px;
+    cursor: pointer;
+}
+.img-back{
+    padding-right: 16px;
+    cursor: pointer;
+}
+
+.h3-recompensas{
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.ganhos{
+    display: flex;
+}
+
+.ganhos-totais{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 12px;
+}
+
+.label-ganhos{
+    padding-bottom: 0px;
+}
+
+.xp-container{
+    display: flex;
+    align-items: center;
+}
+.xp-conquistado{
+    padding-left: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.xp-label{
+    
+}
+.xp-strong{
+    font-size: 32px;
+}
+
+.bonus-container{
+    display: flex;
+}
+
+.bonus-missao{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.bonus-label{
+    display: flex;
+}
+
+.bonus-strong{
+    font-size: 32px;
+
+}
+
+.container-fligth{
+    display: flex;
+    flex-direction: column;
+}
+
+.sub{
+    padding-top: 2px;
+}
+
+.container-matricula{
+    display: flex;
+    flex-direction: column;
+}
+
+.label-matricula{
+    padding-bottom: 4px;
+}
+
+.strong-matricula{
+    font-size: 16px;
+}
+
+.container-data{
+    display: flex;
+    flex-direction: column;
+}
+
+.label-data{
+    padding-bottom: 4px;
+}
+
+.positive {
+  color: #2ecc71; 
+}
+
+.negative {
+  color: #e74c3c; 
+}

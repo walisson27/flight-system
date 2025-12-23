@@ -1,0 +1,153 @@
+body {
+  margin: 0;
+  background: #0e0e0e;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.flight-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.flights-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.flight-card {
+  background: #1e1e1e;
+  border-radius: 8px;
+  padding: 16px 20px;
+  display: grid;
+  grid-template-columns: 
+    2.5fr   
+    2fr     
+    1.5fr   
+    1.5fr   
+    1.5fr;  
+  align-items: center;
+  gap: 20px;
+  justify-items: start;
+}
+
+.flight-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.flight-space{
+    display: flex;
+    align-items: center;
+
+}
+.sub {
+  font-size: 13px;
+  color: #aaa;
+}
+
+.label {
+  font-size: 12px;
+  color: #aaa;
+}
+.label-space{
+    padding-bottom: 4px;
+}
+
+.route {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.route-line {
+  display: flex;
+  align-items: center;
+  /*gap: 6px;*/
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background: #f1c40f;
+  border-radius: 50%;
+}
+
+.line {
+  width: 60px;
+  height: 2px;
+  background: #f1c40f;
+}
+
+.route-codes {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+.back {
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.details-card {
+  background: #1e1e1e;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.rewards {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+
+.green {
+  color: #2ecc71;
+  font-size: 22px;
+}
+
+.details-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.loading {
+  text-align: center;
+  padding: 20px;
+  color: #aaa;
+}
+
+.end {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+}
+.balance{
+    display: flex;
+    align-items: flex-start;
+}
+.positive {
+  color: #2ecc71; 
+}
+
+.negative {
+  color: #e74c3c; 
+}
+
