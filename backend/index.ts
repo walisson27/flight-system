@@ -1,10 +1,10 @@
-import express from "express";
+import express, { Request, Response } from "express";
 import cors from "cors";
 import fs from "fs";
 import path from "path";
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(express.json());
@@ -23,6 +23,8 @@ type Flight = {
       from: string;
       to: string;
     };
+    xp: number;
+    missionBonus: number;
   };
 };
 
@@ -35,11 +37,11 @@ try {
   const json = JSON.parse(file);
   flights = json.flights || [];
 } catch (error) {
-  console.log("Erro ao ler o arquivo de voos");
+  console.error("Erro ao ler o arquivo de voos", error);
   flights = [];
 }
 
-app.get("/flights", (req, res) => {
+app.get("/flights", (req: Request, res: Response) => {
   const page = Number(req.query.page) || 1;
   const limit = Number(req.query.limit) || 10;
 
@@ -54,6 +56,8 @@ app.get("/flights", (req, res) => {
     route: flight.flightData.route,
     balance: flight.flightData.balance,
     date: flight.flightData.date,
+    xp: flight.flightData.xp,
+    missionBonus: flight.flightData.missionBonus
   }));
 
   res.json({
@@ -64,36 +68,26 @@ app.get("/flights", (req, res) => {
   });
 });
 
-app.get("/flights/total-balance", (_req, res) => {
-  let totalBalance = 0;
-
-  flights.forEach(flight => {
-    totalBalance += flight.flightData.balance;
-  });
-
+app.get("/flights/total-balance", (_req: Request, res: Response) => {
+  const totalBalance = flights.reduce((acc, flight) => acc + flight.flightData.balance, 0);
   res.json({ totalBalance });
 });
 
-app.get("/flights/:id", (req, res) => {
+app.get("/flights/:id", (req: Request, res: Response) => {
   const flightId = req.params.id;
-
   const flight = flights.find(f => f.id === flightId);
 
   if (!flight) {
-    return res.status(404).json({
-      error: "Voo não encontrado",
-    });
+    return res.status(404).json({ error: "Voo não encontrado" });
   }
 
   res.json(flight);
 });
 
-app.use((_req, res) => {
-  res.status(404).json({
-    error: "Endpoint não encontrado",
-  });
+app.use((_req: Request, res: Response) => {
+  res.status(404).json({ error: "Endpoint não encontrado" });
 });
 
 app.listen(PORT, () => {
-  console.log(`Servidor rodando em http://localhost:${PORT}`);
+  console.log(`Servidor rodando na porta ${PORT}`);
 });
