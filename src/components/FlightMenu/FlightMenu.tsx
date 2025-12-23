@@ -97,17 +97,17 @@ const FlightMenu = () => {
                   </div>
                 </div>
 
-                <div className="flight-info">
+                <div className="flight-info flight-space">
                   <span className="label">Matrícula</span>
                   <strong>{flight.aircraft.registration}</strong>
                 </div>
 
-                <div className="flight-info">
+                <div className="flight-info flight-space">
                   <span className="label">Data</span>
                   <strong>{flight.date}</strong>
                 </div>
 
-                <div className="flight-info balance flight-space">
+                <div className="flight-info balance">
                   <span className="label label-space">Saldo</span>
                   <strong
                     className={

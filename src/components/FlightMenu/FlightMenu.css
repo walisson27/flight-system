@@ -99,35 +99,6 @@ h1 {
   font-size: 12px;
 }
 
-.back {
-  margin-bottom: 20px;
-  cursor: pointer;
-}
-
-.details-card {
-  background: #1e1e1e;
-  border-radius: 8px;
-  padding: 20px;
-  margin-bottom: 20px;
-}
-
-.rewards {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 16px;
-}
-
-.green {
-  color: #2ecc71;
-  font-size: 22px;
-}
-
-.details-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .loading {
   text-align: center;
   padding: 20px;
@@ -143,11 +114,74 @@ h1 {
     display: flex;
     align-items: flex-start;
 }
+
 .positive {
-  color: #2ecc71; 
+  color: #00FF88; 
+  font-size: 16px;
 }
 
 .negative {
-  color: #e74c3c; 
+  color: #FF0000; 
+  font-size: 16px;
 }
 
+@media (max-width: 768px) {
+  .flight-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .route {
+    width: 100%;
+    align-items: center;
+  }
+
+  .route-line {
+    justify-content: center;
+  }
+
+  .route-codes {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .flight-info,
+  .balance {
+    width: 100%;
+  }
+
+  .balance {
+    align-items: flex-start;
+  }
+}
+@media (max-width: 480px) {
+  .container {
+    width: 95%;
+    margin: 12px auto;
+  }
+
+  .flight-card {
+    padding: 14px;
+  }
+
+  strong {
+    font-size: 14px;
+  }
+
+  .sub,
+  .label {
+    font-size: 11px;
+  }
+
+  .positive,
+  .negative {
+    font-size: 14px;
+  }
+
+  .line {
+    width: 40px;
+  }
+}

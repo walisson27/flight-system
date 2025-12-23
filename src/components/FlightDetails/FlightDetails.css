@@ -25,7 +25,34 @@
     justify-content: space-evenly;
     padding-left: 12px;
 }
+.back {
+  margin-bottom: 20px;
+  cursor: pointer;
+}
 
+.details-card {
+  background: #1e1e1e;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.rewards {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+
+.green {
+  color: #2ecc71;
+  font-size: 22px;
+}
+
+.details-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .label-ganhos{
     padding-bottom: 0px;
 }
@@ -98,9 +125,78 @@
 }
 
 .positive {
-  color: #2ecc71; 
+  color: #00FF88; 
+  font-size: 16px;
 }
 
 .negative {
-  color: #e74c3c; 
+  color: #FF0000; 
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  .details-row,
+  .rewards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ganhos, .xp-container, .bonus-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  .container-fligth{
+    padding-bottom: 15px;
+  }
+  .container-matricula{
+    align-items: center;
+    padding-bottom: 12px;
+  }
+  .container-data{
+    align-items: center;
+  }
+
+  .xp-strong,
+  .bonus-strong {
+    font-size: 24px;
+  }
+
+  .strong-matricula {
+    font-size: 14px;
+  }
+
+  .label, .sub {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .img-back {
+    width: 14px !important;
+    height: 24px !important;
+  }
+
+  .xp-strong,
+  .bonus-strong {
+    font-size: 20px;
+  }
+
+  .strong-matricula {
+    font-size: 12px;
+  }
+
+  .details-card {
+    padding: 14px;
+  }
+
+  .ganhos-totais, .xp-conquistado, .bonus-missao {
+    padding-left: 8px;
+  }
 }
