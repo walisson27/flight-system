@@ -1,9 +1,3 @@
 {
-  "version": 2,
-  "builds": [
-    { "src": "backend/index.ts", "use": "@vercel/node" }
-  ],
-  "routes": [
-    { "src": "/flights/(.*)", "dest": "backend/index.ts" }
-  ]
+  "rewrites": [{"source": "/(.*)", "destination": "/api"}]
 }
