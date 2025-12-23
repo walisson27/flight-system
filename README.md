@@ -18,6 +18,9 @@ Optei por separar frontend e backend para organizar melhor o projeto e simular u
 ### CSS puro
 Todo o estilo foi feito com CSS puro. Preferi não utilizar bibliotecas de estilo para praticar os conceitos básicos de CSS e ter mais controle sobre o layout.
 
+### Responsividade
+responsividade da aplicação, garantindo uma boa experiência em dispositivos móveis, tablets e diferentes tamanhos de tela.
+
 ### Paginação no backend
 A paginação foi implementada no backend para evitar o envio de muitos dados de uma vez e simular como uma API real costuma funcionar.
 
@@ -41,8 +44,6 @@ Melhoraria as mensagens de erro da API e adicionaria logs para facilitar o debug
 ### Filtros e ordenação
 Permitiria filtrar e ordenar os voos por data, rota ou aeronave, melhorando a experiência do usuário.
 
-### Responsividade
-Trabalharia melhor a responsividade da aplicação, garantindo uma boa experiência em dispositivos móveis, tablets e diferentes tamanhos de tela.
 
 ## 🚀 Tecnologias
 
