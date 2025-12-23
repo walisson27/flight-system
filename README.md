@@ -41,6 +41,9 @@ Melhoraria as mensagens de erro da API e adicionaria logs para facilitar o debug
 ### Filtros e ordenação
 Permitiria filtrar e ordenar os voos por data, rota ou aeronave, melhorando a experiência do usuário.
 
+## Responsividade
+Trabalharia melhor a responsividade da aplicação, garantindo uma boa experiência em dispositivos móveis, tablets e diferentes tamanhos de tela.
+
 ## 🚀 Tecnologias
 
 Este projeto foi construído utilizando as seguintes tecnologias:
